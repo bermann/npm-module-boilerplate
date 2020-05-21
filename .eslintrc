@@ -1,0 +1,57 @@
+{
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "plugins": [
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "root": ["./"],
+        "alias": {
+          "src": "./src"
+        }
+      }
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-console": ["off"],
+    "semi": ["error", "never"],
+    "indent": ["error",2],
+    "global-require": ["error"],
+    "handle-callback-err": ["error"],
+    "quotes": ["error", "single"],
+    "keyword-spacing": ["error", { "before": true }],
+    "arrow-spacing": ["error"],
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "always-multiline"],
+    "object-shorthand": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "func-style": ["error", "expression"],
+    "prefer-arrow-callback": ["error"],
+    "no-async-promise-executor": ["off"],
+    "no-multi-spaces": ["error"],
+    "no-trailing-spaces": ["error"],
+    "padded-blocks": ["error", "never"],
+    "brace-style": ["error", "1tbs"],
+    "object-curly-spacing": ["error", "always", { "objectsInObjects": false, "arraysInObjects": false }],
+    "array-bracket-spacing": ["error", "always", { "objectsInArrays": false, "arraysInArrays": false}],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0, "maxBOF": 1 }],
+    "import/newline-after-import": ["error", {"count": 1}],
+    "import/order": ["error"],
+    "import/no-unresolved": ["error"]
+  }
+}
